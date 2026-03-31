@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Code') {
-            steps {
-                git 'https://github.com/YOUR_USERNAME/student-feedback-devops.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t feedback-app .'
